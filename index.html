@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<link rel="shortcut icon" href="images/favicon.png" /> 
+	<script src="js/jquery 3.4.1.js"></script>
+ 	<title> Prework </title>
+<style>
+	/*selección de texto*/
+	::selection {color: gold;  background: azure;} 
+	/* width */
+	::-webkit-scrollbar {
+	width: 7px;
+	}
+	/* Track */
+	::-webkit-scrollbar-track {
+	background: rgba(161, 161, 161, 0.219); 
+	}
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	background: #ffd51c; 
+	}
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	background: #111; 
+	}
+</style> 
+</head>
+	<body>
+		<ul>
+			<li id="andalucia" class="even"><span>Andalucía</span></li>
+			<li id="aragon" class="odd"><span>Aragón</span></li>
+			<li id="asturias" class="even"><span>Asturias</span></li>
+			<li id="canarias" class="odd"><span>Canarias</span></li>
+			<li id="cantabria" class="even"><span>Cantabria</span></li>
+			<li id="castilla-leon" class="odd"><span>Castilla y León</span></li>
+			<li id="castilla-la-mancha" class="even"><span>Castilla La Mancha</span></li>
+			<li id="cataluña" class="odd"><span>Cataluña</span></li>
+			<li id="ceuta" class="even"><span>Ceuta</span></li>
+			<li id="madrid" class="odd"><span>Comunidad de Madrid</span></li>
+			<li id="valencia" class="even"><span>Comunidad Valenciana</span></li>
+			<li id="extremadura" class="odd"><span>Extremadura</span></li>
+			<li id="galicia" class="even"><span>Galicia</span></li>
+			<li id="baleares" class="odd"><span>Islas Baleares</span></li>
+			<li id="rioja" class="even"><span>La Rioja</span></li>
+			<li id="melilla" class="odd"><span>Melilla</span></li>
+			<li id="navarra" class="even"><span>Navarra</span></li>
+			<li id="pais-vasco" class="odd"><span>País Vasco</span></li>
+			<li id="murcia" class="even"><span>Región de Murcia</span></li>
+		 </ul>
+
+
+
+		 <script>
+		var uli =  $("<ul id='mover'></ul>");
+		uli.appendTo("body");
+		for (i=0; i<5; i++){
+			var siguiente = $("ul li:first");
+			$(siguiente).clone().appendTo("#mover");
+			siguiente.detach();
+		}
+
+		var quinto = $("#mover li:last");
+		$(quinto).clone().insertBefore("li:first");
+
+		$('<li id="perejil" class="odd"><span>Isla de Perejil</span></li>').appendTo("#mover");
+
+		 
+		 </script>
+	</body>	    
+</html>
